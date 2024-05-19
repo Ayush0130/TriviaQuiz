@@ -57,8 +57,8 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   void _startTimer() {
-    timer = 15; // 15 seconds for each question
-    answered = false; // Reset the answered flag
+    timer = 15;
+    answered = false;
     _timer?.cancel();
     _timer = Timer.periodic(Duration(seconds: 1), (Timer timer) {
       if (this.timer > 0) {
@@ -66,7 +66,7 @@ class _QuizPageState extends State<QuizPage> {
           this.timer--;
         });
       } else {
-        _nextQuestion(); // Move to the next question when timer runs out
+        _nextQuestion();
       }
     });
   }
